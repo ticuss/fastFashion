@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New user prediction</title>
+    <style>
+      body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FAFAFA;
+        color: #333;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 50px 20px;
+      }
+      h1 {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      p {
+        line-height: 1.6;
+        color: #7f8c8d;
+      }
+      label {
+        display: block;
+        margin-top: 20px;
+        color: #34495e;
+        font-weight: 500;
+      }
+      input[type="number"] {
+        width: 100%;
+        border: 1px solid #dcdcdc;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 5px;
+        font-size: 16px;
+        color: #7f8c8d;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+        background-color: #3498db;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+      }
+      input[type="submit"]:hover {
+        background-color: #2980b9;
+      }
+      button {
+        padding: 10px;
+        margin-bottom: 30px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button a {
+        color: white;
+        text-decoration: none;
+      }
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button>
+        <a href="/described-data">See details about data</a>
+      </button>
+      <h1>Model Prediction</h1>
+      <p>The models are capable to predict the user comportament by the input values required.</p>
+      <form method="POST" action="/predict">
+        <label for="model_choice">Choose a model (1 or 2):</label>
+        <p>1 - Linear Regression Model</p>
+        <p>2 - XGBoost Model</p>
+        <input type="number" id="model_choice" name="model_choice">
+        <label for="productsWished">Products Wished:</label>
+        <p>Products Wished: 1, 2635</p>
+        <input type="number" id="productsWished" name="productsWished">
+        <label for="civilityGenderId">Civility Gender Id:</label>
+        <p>Civility Gender Id: 1, 2, 3</p>
+        <input type="number" id="civilityGenderId" name="civilityGenderId">
+        <label for="daysSinceLastLogin">Days Since Last Login:</label>
+        <p>Days since las login: 0 to 709</p>
+        <input type="number" id="daysSinceLastLogin" name="daysSinceLastLogin">
+        <label for="language_encoded">Language Encoded:</label>
+        <p>Language code Id: 1 (fr), 2(en), 3(es)</p>
+        <input type="number" id="language_encoded" name="language_encoded">
+        <label for="countryCode_encoded">Country Code Encoded:</label>
+        <p>Country Code Encoded: (fr), 2(en), 3(es)</p>
+        <input type="number" id="countryCode_encoded" name="countryCode_encoded">
+        <label for="hasAndroidApp_encoded">Has Android App Encoded:</label>
+        <p>Has Android App Encoded: 0, 1</p>
+        <input type="number" id="hasAndroidApp_encoded" name="hasAndroidApp_encoded">
+        <label for="hasIosApp_encoded">Has iOS App Encoded:</label>
+        <p>Has iOS App Encoded: 0, 1</p>
+        <input type="number" id="hasIosApp_encoded" name="hasIosApp_encoded">
+        <label for="socialNbFollowers">Social Nb Followers:</label>
+        <p>Social Nb Follows: 3, 744</p>
+        <input type="number" id="socialNbFollowers" name="socialNbFollowers">
+        <label for="socialNbFollows">Social Nb Follows:</label>
+        <p>Social Nb Follows: 10, 13764</p>
+        <input type="number" id="socialNbFollows" name="socialNbFollows">
+        <label for="socialProductsLiked">Social Products Liked:</label>
+        <p>Social Products Liked: 47, 51671</p>
+        <input type="number" id="socialProductsLiked" name="socialProductsLiked">
+        <label for="hasAnyApp_encoded">Has Any App Encoded:</label>
+        <p>Has Profile Picture Encoded: 0, 1</p>
+        <input type="number" id="hasAnyApp_encoded" name="hasAnyApp_encoded">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prediction</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0;
+            }
+            .container {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            p {
+                color: #666;
+            }
+            .prediction {
+                font-weight: bold;
+                color: #009578;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Prediction:</h1>
+            <p>
+                The prediction we are getting corresponds to the feature "HasBought". "HasBought" is determined by the number of products bought. If the number of products bought is greater than or equal to 3, "HasBought" is 2. If the number of products bought is less than 3 and greater than 0, "HasBought" is 1. If no products have been bought, "HasBought" is 0.
+            </p>
+            <p class="prediction">{{ prediction | safe }}</p>
+        </div>
+    </body>
+</html>
