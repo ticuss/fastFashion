@@ -29,8 +29,6 @@ Note: There may be problems with the relative path of the files in the notebooks
 
 3.  Install the required packages:
 
-    Copy code
-
     `pip install -r requirements.txt`
 
 4.  Run the notebooks
@@ -47,7 +45,7 @@ Note: There may be problems with the relative path of the files in the notebooks
 
 3.  Open a web browser and navigate to `http://127.0.0.1:5000/` to see the application in action.
 
-    **Troubleshoot:** if there is a problem of loading models for the flask app, change the path of models and csv files in `flask/app.py` file.
+    **Troubleshoot:** if there is a problem of loading models and csv files for the flask app, change the path `flask/app.py` file. (if relative path does't work change it to absolute path)
 
     ex: from
 
